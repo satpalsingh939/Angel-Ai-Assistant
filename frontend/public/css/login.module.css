@@ -1,0 +1,217 @@
+body{
+   /* background: linear-gradient(to right, rgba(239,68,68,0.7), rgba(59,130,246,0.5)); */
+     background: linear-gradient(to right, rgba(215, 189, 189, 0.418), rgba(178, 187, 201, 0.456));
+}
+ 
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--light);
+  padding: 0.3rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  /* position: sticky;
+  top: 0; */
+  z-index: 1000;
+  /* background: linear-gradient(to right, rgba(239,68,68,0.7), rgba(59,130,246,0.5)); */
+  background: linear-gradient(to right, rgba(216, 133, 133, 0.889), rgba(120, 161, 227, 0.686));
+  color: white;
+}
+
+.chat-header .logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  /* text-decoration: underline; */
+  color: rgba(5, 5, 5, 0.625);
+  font-size: 1.08rem;
+} 
+
+.loginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4%;
+  padding: 3rem;
+  /* flex: 0.5; */
+    /* background-color: rgba(255, 255, 255, 0.775); */
+}
+
+.loginCard {
+  background: #ffffff48;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin-left: 2rem;
+  /* width: 350px; */ 
+   width: 30%;
+  text-align: center;
+}
+
+.cardBody h4 {
+  margin-bottom: 0.5rem;
+} 
+
+.textMuted {
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formControl {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.688);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.inputGroupText {
+  margin-left: -35px;
+  cursor: pointer;
+}
+
+.textRight {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.textTheme {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.btnColorTheme {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btnColorTheme:hover {
+  background: #0056b3;
+}
+
+.errorText {
+  color: red;
+  margin-top: 0.5rem;
+}
+
+.switchText {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.loginIllustration img {
+  width: 100%;
+  /* height: 50vh; */
+}
+
+.loginIllustration img {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (max-width: 1024px) {
+  .loginContainer {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .loginCard {
+    width: 60%;
+    margin-left: 0;
+    /* margin-top: 2rem; */
+  }
+
+  .loginIllustration img {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chatHeader {
+    /* flex-direction: column; */
+    text-align: center;
+    padding: 0.6rem;
+  }
+
+  .navLinks {
+    margin-top: 10px;
+  }
+
+  .loginCard {
+    width: 80%;
+  }
+
+  .loginIllustration img {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .chatHeader {
+    padding: 0.5rem;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .navLinks a {
+    margin: 0 6px;
+    font-size: 14px;
+  }
+
+  .loginContainer {
+    padding: 1.5rem;
+  }
+
+  .loginCard {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .btnColorTheme {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .loginIllustration img {
+    max-width: 250px;
+  }
+}

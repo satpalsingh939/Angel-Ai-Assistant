@@ -1,0 +1,249 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 1.4rem;
+  /* background: linear-gradient(
+    to right, 
+    rgba(239, 68, 68, 0.7),
+    rgba(59, 130, 246, 0.5)
+  ); */
+    background: linear-gradient(to right, rgba(216, 133, 133, 0.889), rgba(120, 161, 227, 0.686));
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  transition: 0.3s;
+}
+
+.nav a:hover { 
+   color: rgba(5, 5, 5, 0.625);
+  font-size: 1.08rem;
+}
+
+.headA .btnSecondary {
+  background: linear-gradient(to right, rgba(244, 6, 6, 0.7), #055fef80);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  /* margin-left: 13em;  */
+}
+
+.headA .btnSecondary:hover {
+  background: linear-gradient(to right, rgba(244, 6, 6, 0.918), #055fefe3);
+}
+
+/* 🌟 Angel Section */
+.boxM {
+  text-align: center;
+  padding: 35px 20px;
+    background: linear-gradient(to right, rgba(215, 189, 189, 0.418), rgba(178, 187, 201, 0.456));
+}
+
+.angelImg {
+  /* width: 15%; */
+  margin-bottom: 15px;
+  animation: float 3s ease-in-out infinite;
+   margin-bottom: 5px;
+    width: 90%;
+    max-width: 250px;
+    margin-top: 45px;
+    border-top: 4px solid red;
+    border-bottom: 4px solid blue;
+    border-left: 4px solid rgb(98, 53, 197);
+    border-right: 4px solid rgb(255, 38, 0);
+    border-radius: 39%;
+    /* border-image: linear-gradient(40deg, red, blue, rgb(6, 51, 231)) 1; */
+
+}
+
+.angelImg:hover {
+    max-width: 243px;
+    border-width: 5px;
+    border-style: solid;
+    /* border-image: linear-gradient(40deg, #ff4800, #1900ff) 1; */
+    border-radius: 38%;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.sp1 {
+  color: #ff0000;
+  font-weight: bolder;
+  font-size: x-large;
+  font-family: "Luxurious Roman", serif;
+}
+
+.sp2 {
+  color: #3604ff;
+  font-weight: bolder;
+  font-size: x-large;
+  font-family: "Luxurious Roman", serif;
+}
+
+/* 🌟 Mic Section */
+.micSection {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.micI{
+  /* width: 100%; */
+  height: 3vh;
+}
+
+.btnPrimary {
+  background: #ff4081;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  width: 20%;
+  font-size: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btnPrimary:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.btnPrimary:hover:not(:disabled) {
+  background: #e73370;
+}
+
+/* 🔹 Tablet Screens */
+@media (max-width: 992px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 0.6rem 1rem;
+  }
+
+  .nav a {
+    margin-left: 15px;
+    font-size: 15px;
+  }
+
+  .headA .btnSecondary {
+    margin-left: auto; /* right side pe rahe */
+    margin-right: 0;
+    font-size: 13px;
+    padding: 8px 15px;
+  }
+
+  .angelImg {
+    max-width: 200px;
+  }
+
+  .btnPrimary {
+    width: 40%;
+  }
+}
+
+/* 🔹 Mobile Screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo img {
+    height: 45px;
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+    gap: 12px;
+  }
+
+  .nav a {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .headA .btnSecondary {
+    margin: 15px 0 0 0;
+    /* width: 60%; */
+  }
+
+  .angelImg {
+    max-width: 180px;
+    margin-top: 30px;
+  }
+
+  .btnPrimary {
+    width: 60%;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+/* 🔹 Extra Small Screens (phones under 480px) */
+@media (max-width: 480px) {
+  .header {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nav a {
+    font-size: 13px;
+  }
+
+  .headA .btnSecondary {
+    /* width: 80%; */
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+
+  .angelImg {
+    max-width: 150px;
+    border-width: 3px;
+  }
+
+  .sp1, .sp2 {
+    font-size: large;
+  }
+
+  .btnPrimary {
+    width: 80%;
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+}
