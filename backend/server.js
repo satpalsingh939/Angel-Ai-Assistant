@@ -8,13 +8,13 @@ const authRoutes = require('./routes/auth');
 const assistRoutes = require('./routes/assist');
 const Contact = require('./models/contact.js');
 
-// app.use(cors());
+app.use(cors());
 
-app.use(cors({
-  origin: "https://angel-ai-assistant-1.vercel.app", 
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
+// app.use(cors({
+//   origin: "https://angel-ai-assistant-1.vercel.app", 
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+//   credentials: true
+// }));
 
 
 app.use(express.json());

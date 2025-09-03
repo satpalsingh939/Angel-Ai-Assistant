@@ -325,8 +325,9 @@ export default function AngelAssistant() {
           <img src="/logoPS.png" alt="logo" />
         </div>
         <a href="/text" className={styles.headA}>
-          <button className={styles.btnSecondary}>Angel Chatbot</button>
+          <button className={styles.btnSecondary}> <Link to="/voice">Angel Chatbot</Link></button>
         </a>
+
         <nav className={styles.nav}>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>

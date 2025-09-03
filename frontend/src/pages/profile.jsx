@@ -69,8 +69,10 @@ export default function ProfilePage() {
         <div className={styles.logo}>
           <img src="/logoPS.png" alt="logo" />
         </div>
-        <a href="/voice" className={styles.headerLink}>Virtual Angel</a>
-        <a href="/text" className={styles.headerLink}>Angel Chatbot</a>
+        <a href="/voice" className={styles.headerLink}>
+        <Link to="/voice">Virtual Angel</Link></a>
+        <a href="/text" className={styles.headerLink}>
+         <Link to="/voice">Angel Chatbot</Link></a>
         {/* <a href="/text" className={styles.headA}>
           <button className={styles.btnSecondary}>Angel Chatbot</button>
         </a> */}

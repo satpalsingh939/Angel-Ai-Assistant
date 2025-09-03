@@ -289,7 +289,10 @@ export default function TextAssistant() {
         <div className={styles.logo}>
           <img src="/logoPS.png" alt="logo" />
         </div>
-        <a href="/voice" className={styles.headerLink}>Virtual Angel</a>
+        {/* <a href="/voice" className={styles.headerLink}>Virtual Angel</a> */}
+        <a href="/voice" className={styles.headerLink}>
+          <Link to="/voice">Virtual Angel</Link></a>
+
         <nav className={styles.navLinks}>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
