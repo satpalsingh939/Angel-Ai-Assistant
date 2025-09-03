@@ -21,7 +21,7 @@ export default function ProfilePage() {
       try {
         // const res = await fetch("http://localhost:5000/api/auth/profile", {
         const res = await fetch("https://angel-ai-assistant.onrender.com/api/auth/profile", {
-          method: "GET", 
+          method: "GET",
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
@@ -69,14 +69,16 @@ export default function ProfilePage() {
         <div className={styles.logo}>
           <img src="/logoPS.png" alt="logo" />
         </div>
-        <a href="/voice" className={styles.headerLink}>
-        <Link to="/voice">Virtual Angel</Link></a>
-        <a href="/text" className={styles.headerLink}>
-         <Link to="/voice">Angel Chatbot</Link></a>
+        <Link to="/voice" className={styles.headerLink}>
+          Virtual Angel
+        </Link>
+        <Link to="/text" className={styles.headerLink}>
+          Angel Chatbot
+        </Link>
         {/* <a href="/text" className={styles.headA}>
           <button className={styles.btnSecondary}>Angel Chatbot</button>
         </a> */}
-        <nav className={styles.nav}>  
+        <nav className={styles.nav}>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/member">Member</Link>
@@ -84,25 +86,25 @@ export default function ProfilePage() {
       </header>
 
       <main className={styles.profilePage}>
-  <h1 className={styles.title}>Profile</h1>
+        <h1 className={styles.title}>Profile</h1>
 
-  <div className={styles.card}>
-      <div className={styles.defaultAvatar}>{firstLetter}</div>
-    <div className={styles.infoBlock}>
-      <p><b>Name:</b> {user.name}</p>
-      <p><b>Email:</b> {user.email}</p>
-      {/* <p><b>Bio:</b> {user.bio || "No bio added yet"}</p> */}
-    </div>
-    <button onClick={handleLogout} className={styles.btnLogout}>
-        Logout
-      </button>
+        <div className={styles.card}>
+          <div className={styles.defaultAvatar}>{firstLetter}</div>
+          <div className={styles.infoBlock}>
+            <p><b>Name:</b> {user.name}</p>
+            <p><b>Email:</b> {user.email}</p>
+            {/* <p><b>Bio:</b> {user.bio || "No bio added yet"}</p> */}
+          </div>
+          <button onClick={handleLogout} className={styles.btnLogout}>
+            Logout
+          </button>
 
- <button  className={styles.btnLogout}>
-      <Link to="/forgetPass">Change Password</Link>
-       </button>
+          <button className={styles.btnLogout}>
+            <Link to="/forgetPass">Change Password</Link>
+          </button>
 
-  </div>
-</main>
+        </div>
+      </main>
 
 
       <Footer />
