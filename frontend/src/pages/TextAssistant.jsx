@@ -287,7 +287,7 @@ export default function TextAssistant() {
       {/* Header */}
       <header className={styles.chatHeader}>
         <div className={styles.logo}>
-          <img src="/public/logoPS.png" alt="logo" />
+          <img src="/logoPS.png" alt="logo" />
         </div>
         <a href="/voice" className={styles.headerLink}>Virtual Angel</a>
         <nav className={styles.navLinks}>
@@ -302,7 +302,7 @@ export default function TextAssistant() {
       <div className={styles.chatBox}>
         {history.length === 0 && (
           <div className={styles.aiBox}>
-            <img src="/public/a1-removebg-preview (1)a.png" alt="AI" />
+            <img src="/a1-removebg-preview (1)a.png" alt="AI" />
             <div className={styles.aiMsg}>Hello! How can I help you?</div>
           </div>
         )}
@@ -324,7 +324,7 @@ export default function TextAssistant() {
             </div>
           ) : (
             <div key={i} className={styles.aiBox}>
-              <img src="/public/a1-removebg-preview (1)a.png" alt="AI" />
+              <img src="/a1-removebg-preview (1)a.png" alt="AI" />
               <div className={styles.aiMsg}>{m.text}</div>
             </div>
           )

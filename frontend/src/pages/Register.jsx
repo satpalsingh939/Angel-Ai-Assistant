@@ -215,7 +215,7 @@ export default function Register() {
 
     try {
       // const res = await fetch("http://localhost:5000/api/auth/register", {
-      const res = await fetch("angel-ai-assistant.vercel.app/api/auth/register", {
+      const res = await fetch("https://angel-ai-assistant.onrender.com/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password }),
@@ -361,7 +361,7 @@ export default function Register() {
       {/* Header */}
        <header className={styles["chat-header"]}>
                   <div className={styles.logo}>
-                    <img src="/public/logoPS.png" alt="logo" />
+                    <img src="/logoPS.png" alt="logo" />
                   </div>
                   <nav className={styles["nav-links"]}>
                     <Link to="/">Home</Link>
@@ -374,7 +374,7 @@ export default function Register() {
         {/* Left Illustration */}
         <div className={styles.box1}>
           <img
-            src="/public/logoPS.png"
+            src="/logoPS.png"
             alt="illustration"
             className={styles.illustration}
           />

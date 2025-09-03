@@ -24,7 +24,7 @@ export default function MembershipPage() {
     <>
       <header className={styles["chat-header"]}>
         <div className={styles.logo}>
-          <img src="/public/logoPS.png" alt="logo" />
+          <img src="/logoPS.png" alt="logo" />
         </div>
         <nav className={styles["nav-links"]}>
           <Link to="/">Home</Link>

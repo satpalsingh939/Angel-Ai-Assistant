@@ -20,7 +20,7 @@ export default function ProfilePage() {
     const fetchProfile = async () => {
       try {
         // const res = await fetch("http://localhost:5000/api/auth/profile", {
-        const res = await fetch("angel-ai-assistant.vercel.app/api/auth/profile", {
+        const res = await fetch("https://angel-ai-assistant.onrender.com/api/auth/profile", {
           method: "GET", 
           headers: {
             "Content-Type": "application/json",
@@ -50,7 +50,7 @@ export default function ProfilePage() {
   const handleLogout = async () => {
     try {
       // await fetch("http://localhost:5000/api/auth/logout", {
-      await fetch("angel-ai-assistant.vercel.app/api/auth/logout", {
+      await fetch("https://angel-ai-assistant.onrender.com/api/auth/logout", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -67,7 +67,7 @@ export default function ProfilePage() {
     <>
       <header className={styles.header}>
         <div className={styles.logo}>
-          <img src="/public/logoPS.png" alt="logo" />
+          <img src="/logoPS.png" alt="logo" />
         </div>
         <a href="/voice" className={styles.headerLink}>Virtual Angel</a>
         <a href="/text" className={styles.headerLink}>Angel Chatbot</a>

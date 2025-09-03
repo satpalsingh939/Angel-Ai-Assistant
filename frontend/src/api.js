@@ -1,5 +1,5 @@
 // const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
-const BACKEND = import.meta.env.VITE_BACKEND_URL || 'angel-ai-assistant.vercel.app';
+const BACKEND = import.meta.env.VITE_BACKEND_URL || 'https://angel-ai-assistant.onrender.com';
 
 
 export async function api(path, opts = {}) { 

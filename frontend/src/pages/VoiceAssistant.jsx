@@ -278,7 +278,7 @@ export default function AngelAssistant() {
   try {
     setLoading(true);
     // const res = await fetch("http://localhost:5000/api/assist/voice", {
-     const res = await fetch("angel-ai-assistant.vercel.app/api/assist/voice", {
+     const res = await fetch("https://angel-ai-assistant.onrender.com/api/assist/voice", {
       method: "POST", 
       headers: {
         "Content-Type": "application/json",
@@ -322,7 +322,7 @@ export default function AngelAssistant() {
       {/* 🔹 Header */}
       <header className={styles.header}>
         <div className={styles.logo}>
-          <img src="/public/logoPS.png" alt="logo" />
+          <img src="/logoPS.png" alt="logo" />
         </div>
         <a href="/text" className={styles.headA}>
           <button className={styles.btnSecondary}>Angel Chatbot</button>
@@ -338,7 +338,7 @@ export default function AngelAssistant() {
       {/* 🔹 Angel Section */}
       <div className={styles.boxM}>
         <img
-          src="/public/a1-removebg-preview (1)a.png"
+          src="/a1-removebg-preview (1)a.png"
           alt="Angel"
           className={styles.angelImg}
         />
@@ -372,7 +372,7 @@ export default function AngelAssistant() {
                 <span className={styles.loader}></span>  
               ) : (
                 <>
-                  <img src="/public/img.svg" alt="mic" className={styles.micI} />
+                  <img src="/img.svg" alt="mic" className={styles.micI} />
                   Start Talking with Angel
                 </>
               )}

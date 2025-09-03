@@ -242,7 +242,7 @@ export default function Home() {
       {/* Header */}
       <header className={styles["chat-header"]}>
         <div className={styles.logo}>
-          <img src="/public/logoPS.png" alt="logo" />
+          <img src="/logoPS.png" alt="logo" />
         </div>
         <nav className={styles["nav-links"]}>
           <Link to="/">Home</Link>
@@ -293,7 +293,7 @@ export default function Home() {
           <h1>Why Choose Angel AI?</h1>
           <div className={styles.row}>
             <div className={styles.image}>
-              <img src="/public/i1-removebg-preview.png" alt="About" />
+              <img src="/i1-removebg-preview.png" alt="About" />
             </div>
             <div className={styles.content}>
               <h3>To provide a simple, reliable and smart AI assistant for everyone.</h3>
@@ -349,7 +349,7 @@ export default function Home() {
             </div>
 
             <div className={styles.image}>
-              <img src="/public/4-removebg-preview.png" alt="Membership" />
+              <img src="/4-removebg-preview.png" alt="Membership" />
             </div>
           </div>
         </div>
@@ -378,13 +378,13 @@ export default function Home() {
   <div className={styles["assistant-box"]}>
     <h3>Virtual Angel</h3>
     <p>Speak naturally and let Angel respond with voice-powered AI assistant.</p>
-    <img src="/public/Screenshot 2025-08-30 210809.png" alt="Virtual Angel" />
+    <img src="/Screenshot 2025-08-30 210809.png" alt="Virtual Angel" />
   </div>
 
   <div className={styles["assistant-box"]}>
     <h3>Angel Chatbot</h3>
     <p>Text and chat with Angel to get instant answers and assistant.</p>
-    <img src="/public/Screenshot 2025-08-30 211212.png" alt="Angel Chatbot" />
+    <img src="/Screenshot 2025-08-30 211212.png" alt="Angel Chatbot" />
   </div>
 </div>
 

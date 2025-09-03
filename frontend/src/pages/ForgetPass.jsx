@@ -14,7 +14,7 @@ export default function ForgetPassword() {
         e.preventDefault();
         try {
             // const res = await fetch("http://localhost:5000/api/auth/emailFind", {
-            const res = await fetch("angel-ai-assistant.vercel.app/api/auth/emailFind", {
+            const res = await fetch("https://angel-ai-assistant.onrender.com/api/auth/emailFind", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email }),
@@ -38,7 +38,7 @@ export default function ForgetPassword() {
         e.preventDefault();
         try {
             // const res = await fetch("http://localhost:5000/api/auth/forgetPass", {
-            const res = await fetch("angel-ai-assistant.vercel.app/api/auth/forgetPass", {
+            const res = await fetch("https://angel-ai-assistant.onrender.com/api/auth/forgetPass", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, newPassword }),
@@ -62,7 +62,7 @@ export default function ForgetPassword() {
         <>
             <header className={styles["chat-header"]}>
                 <div className={styles.logo}>
-                    <img src="/public/logoPS.png" alt="logo" />
+                    <img src="/logoPS.png" alt="logo" />
                 </div>
                 <nav className={styles["nav-links"]}>
                     <Link to="/">Home</Link>

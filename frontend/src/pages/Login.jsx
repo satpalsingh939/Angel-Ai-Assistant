@@ -43,7 +43,7 @@ export default function Login() {
     e.preventDefault();
     try {
       // const res = await fetch("http://localhost:5000/api/auth/login", {
-      const res = await fetch("angel-ai-assistant.vercel.app/api/auth/login", {
+      const res = await fetch("https://angel-ai-assistant.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -68,7 +68,7 @@ export default function Login() {
       {/* Header */}
       <header className={styles["chat-header"]}>
         <div className={styles.logo}>
-          <img src="/public/logoPS.png" alt="logo" />
+          <img src="/logoPS.png" alt="logo" />
         </div>
         <nav className={styles["nav-links"]}>
           <Link to="/">Home</Link>
@@ -80,7 +80,7 @@ export default function Login() {
       <div className={styles.loginContainer}>
         {/* Left Image */}
         <div className={styles.loginIllustration}>
-          <img src="/public/logoPS.png" alt="Login Illustration" />
+          <img src="/logoPS.png" alt="Login Illustration" />
         </div>
 
         {/* Login Card */}
