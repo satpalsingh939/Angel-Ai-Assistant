@@ -1,5 +1,2 @@
 # node module 
 node_modules/
-
-# secret files 
-.env
