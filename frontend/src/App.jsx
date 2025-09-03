@@ -7,6 +7,9 @@ import Login from './pages/Login';
 import TextAssistant from './pages/TextAssistant';
 import VoiceAssistant from './pages/VoiceAssistant';
 import About from './pages/About';
+import Member from './pages/Member';
+import ForgetPassword from './pages/ForgetPass';
+import Profile from './pages/profile';
 
 export default function App() {
   return (
@@ -20,6 +23,9 @@ export default function App() {
           <Route path='/text' element={<TextAssistant />} />
           <Route path='/voice' element={<VoiceAssistant />} />
           <Route path='/about' element={<About />} />
+          <Route path='/member' element={<Member />} />
+          <Route path='/forgetPass' element={<ForgetPassword />} />
+          <Route path='/profile' element={<Profile />} />
           {/* <Route path='/voice' element={<VoiceAssistant />} /> */}
         </Routes>
       </div>

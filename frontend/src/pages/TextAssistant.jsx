@@ -160,7 +160,7 @@
 import React, { useState } from 'react';
 import { api } from '../api';
 import { FaImage, FaArrowUp, FaUser } from "react-icons/fa";
-import styles from '/public/css/TextAssistant.module.css';  
+import styles from '/public/css/TextAssistant.module.css';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
@@ -175,9 +175,9 @@ export default function TextAssistant() {
     if (!message && !file) return;
     setBusy(true);
     try {
-      const res = await api('/api/assist/text', { 
-        method: 'POST', 
-        body: JSON.stringify({ message }) 
+      const res = await api('/api/assist/text', {
+        method: 'POST',
+        body: JSON.stringify({ message })
       });
       setBusy(false);
       if (res.reply) {
@@ -189,12 +189,12 @@ export default function TextAssistant() {
         setMessage('');
         setFile(null);
       } else {
-        setHistory(h => [...h, { role:'assistant', text: 'No reply (check console/back-end)' }]);
+        setHistory(h => [...h, { role: 'assistant', text: 'No reply (check console/back-end)' }]);
       }
     } catch (err) {
       console.error(err);
       setBusy(false);
-      setHistory(h => [...h, { role:'assistant', text: 'Error sending message' }]);
+      setHistory(h => [...h, { role: 'assistant', text: 'Error sending message' }]);
     }
   }
 
@@ -282,7 +282,7 @@ export default function TextAssistant() {
   // );
 
 
-return (
+  return (
     <div className={styles.chatContainer}>
       {/* Header */}
       <header className={styles.chatHeader}>
@@ -292,8 +292,9 @@ return (
         <a href="/voice" className={styles.headerLink}>Virtual Angel</a>
         <nav className={styles.navLinks}>
           <Link to="/">Home</Link>
-          {/* <Link to="/register">Register</Link> */}
-          {/* <Link to="/login">Login</Link> */}
+          <Link to="/about">About</Link>
+          <Link to="/member">Member</Link>
+          <Link to="/profile">Profile</Link>
         </nav>
       </header>
 

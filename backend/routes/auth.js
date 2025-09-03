@@ -3,6 +3,15 @@ const router = express.Router();
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const auth = require('../middleware/auth');
+
+
+const multer = require("multer");
+const path = require("path");
+const fs = require("fs");
+
+const app = express();
+
 
 router.post('/register', async (req, res) => {
   try {
@@ -35,5 +44,65 @@ router.post('/login', async (req, res) => {
     console.error(err); res.status(500).json({ message: 'Server error' });
   }
 });
+
+// VERIFY EMAIL
+router.post("/emailFind", async (req, res) => {
+  try {
+    const { email } = req.body;
+    if (!email) return res.status(400).json({ message: "Email required" });
+
+    const user = await User.findOne({ email });
+    if (!user) return res.status(400).json({ message: "User not found" });
+    
+    res.json({ message: "Email verified" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+// FORGET PASSWORD
+router.post("/forgetPass", async (req, res) => {
+  try {
+    const { email, newPassword } = req.body;
+    if (!email || !newPassword)
+      return res.status(400).json({ message: "Missing fields" });
+
+    const user = await User.findOne({ email });
+    if (!user) return res.status(400).json({ message: "User not found" });
+
+    const salt = await bcrypt.genSalt(10);
+    const hash = await bcrypt.hash(newPassword, salt);
+
+    user.password = hash;
+    await user.save();
+    
+    res.json({ message: "Password updated successfully" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+// GET PROFILE
+router.get("/profile", auth, async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id).select("-password");
+    if (!user) return res.status(404).json({ message: "User not found" });
+
+    // ✅ hamesha full URL bhej
+    res.json({
+      id: user._id,
+      name: user.name,
+      email: user.email,
+      bio: user.bio,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+
 
 module.exports = router;

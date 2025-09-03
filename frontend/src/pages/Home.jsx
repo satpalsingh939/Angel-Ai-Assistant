@@ -12,20 +12,20 @@ import { Link } from "react-router-dom";
 const reviews = [
   {
     text: "Angel Assistant helped me with my college projects in seconds. Very smooth experience.",
-    name: "Satpal singh jadhav",
+    name: "Harpal singh",
     job: "Web Dev",
     stars: 5,
     img: "/public/i1-removebg-preview.png",
   },
   {
     text: "Voice recognition is awesome, feels like talking to a real person.",
-    name: "Satpal singh jadhav",
+    name: "Chiku jadhav",
     job: "Developer",
     stars: 3.5,
     img: "/public/i1-removebg-preview.png",
   },
   {
-    text: "Simple and useful, highly recommended.",
+    text: "Simple and useful, Recommended for any work.",
     name: "Angel",
     job: "Tester",
     stars: 4,
@@ -37,18 +37,21 @@ const reviews = [
 export default function Home() {
 
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!email) return;
-    // 🔹 Here you can integrate with your backend (Node.js + MongoDB)
-    // Example: send email to your API
-    console.log("User subscribed with email:", email);
-    setEmail("");
-    alert("You will be notified about new updates!");
+
+    setMessage(
+
+      alert('You have successfully joined our community! But to unlock premium features and full access, you need to get a membership.')
+    );
+
+    setEmail(""); // clear input
   };
 
   return (
-    
+
     //     <>
     //       {/* Header */}
 
@@ -248,6 +251,7 @@ export default function Home() {
           <a href="#contactU">Contact</a>
           <Link to="/register">Register</Link>
           <Link to="/login">Login</Link>
+          <Link to="/member">Member</Link>
         </nav>
       </header>
 
@@ -255,25 +259,29 @@ export default function Home() {
       <section className={styles.home} id="home">
         <div className={styles.row}>
           <div className={styles.content}>
-            I'M <h1>ANGEL</h1>
+            I'M <h1>𝙰𝚗𝚐𝚎𝚕
+            </h1>
             <h3>Your Personal AI Assistant</h3>
             <p>
-              Talk, chat & get instant help with our smart assistant.
+              {/* Talk, chat & get instant help with our smart assistant. */}
+              Chat or talk with Angel and get instant answers.
               <br />
-              Prepare to enter the incredible world of literature.
+              ✅ Voice Commands for hands-free
+              ✅ Text Assistance for quick chats   <br />
+              ✅ Fast, reliable & always available
+              ✅ 24/7 Availability
               <br />
-              ✅ Smart Voice Commands
+              {/* Smart Voice Commands
               ✅ Instant Text Assistance
               <br />
-              ✅ Easy & Fast Response
-              ✅ 24/7 Availability
+              ✅ Easy & Fast Response */}
             </p>
             <a href="/" className={styles.btn}>
-            <Link to="/register">Voice Assistance</Link>
-              
+              <Link to="/register">Voice Assistant</Link>
+
             </a>
             <a href="/" className={styles.btn}>
-              <Link to="/register">Text Assistance</Link>
+              <Link to="/register">Text Assistant</Link>
             </a>
           </div>
         </div>
@@ -282,22 +290,24 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className={styles.about}>
         <div className={styles.container}>
-          <h1>WHY CHOOSE US?</h1>
+          <h1>Why Choose Angel AI?</h1>
           <div className={styles.row}>
             <div className={styles.image}>
               <img src="/public/i1-removebg-preview.png" alt="About" />
             </div>
             <div className={styles.content}>
               <h3>To provide a simple, reliable and smart AI assistant for everyone.</h3>
-              <p>Angel is always here to help.</p>
+              <p>Angel AI is always for you — making conversations smarter, faster, and safer.</p>
+               <p>Angel delivers quick and reliable answers so you can focus on what matters most.</p>
+               <p>Always Available, Anytime Whether day or night, Angel is here..</p>
               <div className={styles["icons-container"]}>
                 <div className={styles.icons}>
                   <i className="fas fa-shield"></i>
-                  <span>Safe Conversion</span>
+                  <span>Secure Conversation</span>
                 </div>
                 <div className={styles.icons}>
                   <i className="fas fa-wallet"></i>
-                  <span>Easy & Fast Response</span>
+                  <span>Easy & Accurate Responses</span>
                 </div>
                 <div className={styles.icons}>
                   <i className="fas fa-headset"></i>
@@ -309,7 +319,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Member Section */}
       <section id="member" className={styles.member}>
         <div className={styles.container}>
           <h1>BECOME A MEMBER!</h1>
@@ -317,11 +326,12 @@ export default function Home() {
             <div className={styles.content}>
               <h3>
                 Join Our <span>community</span> And <br />
-                Get Notify For <span>New Updates!</span>
+                Get Notified For <span>New Updates!</span>
               </h3>
-              <a href="./member.html" className={styles.btn}>
-                  Join Member
-                </a>
+
+              <a href="" className={styles.btn}>
+                <Link to="/member" >Join Member</Link>
+              </a>
 
               <form onSubmit={handleSubmit}>
                 <input
@@ -333,8 +343,9 @@ export default function Home() {
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <input type="submit" value="Get Notify" className={styles.btn} />
-              
               </form>
+
+              {message && <p className={styles.success}>{message}</p>}
             </div>
 
             <div className={styles.image}>
@@ -344,57 +355,79 @@ export default function Home() {
         </div>
       </section>
 
+
+
       {/* AI Assistants Section */}
-      <section id="ai-assistants" className={styles.assistants}>
+      {/* <section id="ai-assistants" className={styles.assistants}>
         <h2>Dear Angel - AI Assistants</h2>
         <p>Use Text Assistant or Voice Assistant to interact with Angel.</p>
         <div className={styles["assistant-grid"]}>
           <div className={styles["assistant-box"]}>
-            {/* <TextAssistant /> */}
-            <img src="/public/Screenshot 2025-08-25 223441.png" />
+            <img src="/public/Screenshot 2025-08-27 200858.png" />
           </div>
           <div className={styles["assistant-box"]}>
-            {/* <VoiceAssistant /> */}
-            <img src="/public/Screenshot 2025-08-25 231520.png" />
+            <img src="/public/Screenshot 2025-08-27 200936.png" />
           </div>
-        </div>
+        </div> */}
+
+ <section id="ai-assistants" className={styles.assistants}>
+<h2>Meet Your Angel AI Assistants</h2>
+<p>Choose how you want to interact —  speak with <strong>Virtual Angel</strong> or chat with <strong>Angel Chatbot</strong>.</p>
+
+<div className={styles["assistant-grid"]}>
+  <div className={styles["assistant-box"]}>
+    <h3>Virtual Angel</h3>
+    <p>Speak naturally and let Angel respond with voice-powered AI assistant.</p>
+    <img src="/public/Screenshot 2025-08-30 210809.png" alt="Virtual Angel" />
+  </div>
+
+  <div className={styles["assistant-box"]}>
+    <h3>Angel Chatbot</h3>
+    <p>Text and chat with Angel to get instant answers and assistant.</p>
+    <img src="/public/Screenshot 2025-08-30 211212.png" alt="Angel Chatbot" />
+  </div>
+</div>
+
+
+
+
       </section>
 
       {/* Reviews */}
-        <section className={styles.reviews} id="reviews">
-  <h1>Client's Reviews</h1>
-  
-  <div className={styles.reviewsContainer}>
-    {reviews.map((review, i) => (
-      <div key={i} className={styles.reviewBox}>
-        <i className="fas fa-quote-left quote"></i>
-        <p>{review.text}</p>
-        <div className={styles.content}>
-          <div className={styles.info}>
-            <div className={styles.name}>{review.name}</div>
-            <div className={styles.job}>{review.job}</div>
-            <div className={styles.stars}>
-              {Array.from({ length: 5 }, (_, index) => {
-                if (index < Math.floor(review.stars)) {
-                  return <i key={index} className="fas fa-star"></i>;
-                } else if (review.stars % 1 !== 0 && index === Math.floor(review.stars)) {
-                  return <i key={index} className="fas fa-star-half-alt"></i>;
-                } else {
-                  return <i key={index} className="far fa-star"></i>;
-                }
-              })}
+      <section className={styles.reviews} id="reviews">
+        <h1>Client's Reviews</h1>
+
+        <div className={styles.reviewsContainer}>
+          {reviews.map((review, i) => (
+            <div key={i} className={styles.reviewBox}>
+              <i className="fas fa-quote-left quote"></i>
+              <p>{review.text}</p>
+              <div className={styles.content}>
+                <div className={styles.info}>
+                  <div className={styles.name}>{review.name}</div>
+                  <div className={styles.job}>{review.job}</div>
+                  <div className={styles.stars}>
+                    {Array.from({ length: 5 }, (_, index) => {
+                      if (index < Math.floor(review.stars)) {
+                        return <i key={index} className="fas fa-star"></i>;
+                      } else if (review.stars % 1 !== 0 && index === Math.floor(review.stars)) {
+                        return <i key={index} className="fas fa-star-half-alt"></i>;
+                      } else {
+                        return <i key={index} className="far fa-star"></i>;
+                      }
+                    })}
+                  </div>
+                </div>
+                <div className={styles.image}>
+                  <img src={review.img} alt={review.name} />
+                </div>
+              </div>
             </div>
-          </div>
-          <div className={styles.image}>
-            <img src={review.img} alt={review.name} />
-          </div>
+          ))}
         </div>
-      </div>
-    ))}
-  </div>
-</section>
-    <div id="contactU"> </div>
-      {/* Footer */} 
+      </section>
+      <div id="contactU"> </div>
+      {/* Footer */}
       < Footer />
     </>
 

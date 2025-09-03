@@ -17,6 +17,7 @@ export default function AboutMe() {
               {/* <Link to="/">Contact</Link> */}
               <Link to="/register">Register</Link>
               <Link to="/login">Login</Link>
+              <Link to="/member">Member</Link>
             </nav>
           </header>
 
@@ -29,7 +30,7 @@ export default function AboutMe() {
               A smart assistant built with React, Node.js & MongoDB
             </p>
             <p className={styles.content1}>  
-              This project is designed to provide users with a seamless experience of interacting
+              This project is designed to provide users with a great experience of interacting
               with an intelligent assistant. It supports <b>voice and text-based queries</b>, helps
               in automating small tasks, and delivers quick, reliable information. The focus is on{" "}
               <b>direct access, usability, and responsiveness</b> for end users.
@@ -44,6 +45,7 @@ export default function AboutMe() {
                 <FaCode /> &nbsp; <span>Features:</span> Voice + Text Assistant, NLP, User-Friendly UI
               </li>
               <li>
+                {/* <FaUser /> &nbsp; <span>Developer:</span> Palak Rathore / Satpal Singh Jadhav */}
                 <FaUser /> &nbsp; <span>Developer:</span> Satpal Singh Jadhav
               </li>
             </ul>
@@ -77,7 +79,7 @@ export default function AboutMe() {
               <p>
                 The AI Assistant is focused on being an everyday digital helper for users, with
                 simple design and efficient responses. The project can be expanded to support{" "}
-                <b>farmer market access, educational help, and productivity tools</b> in the future.
+                <b>User access AI tool, educational help, and productivity tools</b> in the future.
               </p>
             </div>
             <div className={styles.projectCard}>

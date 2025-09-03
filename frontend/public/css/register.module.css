@@ -118,7 +118,7 @@ body {
 }
 
 .btnColorTheme {
-  background: #007bff;
+   background: linear-gradient(to right, rgba(226, 87, 87, 0.581), #83a9e680);
   color: white;
   border: none;
   padding: 12px;
@@ -130,7 +130,7 @@ body {
 }
 
 .btnColorTheme:hover {
-  background: #0056b3;
+  background: linear-gradient(to right, rgba(228, 81, 81, 0.737), #749ee2c3);
 }
 
 .errorText {
@@ -185,13 +185,10 @@ body {
 }
 
 @media (max-width: 768px) {
-  .chatHeader {
+  .chat-header {
     /* flex-direction: column; */
     text-align: center;
-  }
-
-  .navLinks {
-    margin-top: 10px;
+    padding: 0.3rem;
   }
 
   .card {
@@ -204,15 +201,15 @@ body {
     font-size: 14px;
   }
 
-  .chatHeader {
-    padding: 0.5rem;
+   .chat-header {
+    padding: 0.3rem 1rem;
   }
 
-  .logo img {
-    width: 40px;
+  .chat-header .logo img {
+    height: 30px;
   }
 
-  .navLinks a {
+  .nav-links a {
     margin: 0 6px;
     font-size: 14px;
   }
