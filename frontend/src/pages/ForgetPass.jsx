@@ -14,7 +14,7 @@ export default function ForgetPassword() {
         e.preventDefault();
         try {
             // const res = await fetch("http://localhost:5000/api/auth/emailFind", {
-            const res = await fetch("http://localhost:5000/api/auth/emailFind", {
+            const res = await fetch("angel-ai-assistant.vercel.app/api/auth/emailFind", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email }),
@@ -38,7 +38,7 @@ export default function ForgetPassword() {
         e.preventDefault();
         try {
             // const res = await fetch("http://localhost:5000/api/auth/forgetPass", {
-            const res = await fetch("http://localhost:5000/api/auth/forgetPass", {
+            const res = await fetch("angel-ai-assistant.vercel.app/api/auth/forgetPass", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, newPassword }),

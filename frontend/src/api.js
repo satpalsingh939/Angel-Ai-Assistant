@@ -1,4 +1,6 @@
-const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+// const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+const BACKEND = import.meta.env.VITE_BACKEND_URL || 'angel-ai-assistant.vercel.app';
+
 
 export async function api(path, opts = {}) { 
   const token = localStorage.getItem('token');

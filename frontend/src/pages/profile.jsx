@@ -20,7 +20,7 @@ export default function ProfilePage() {
     const fetchProfile = async () => {
       try {
         // const res = await fetch("http://localhost:5000/api/auth/profile", {
-        const res = await fetch("http://localhost:5000/api/auth/profile", {
+        const res = await fetch("angel-ai-assistant.vercel.app/api/auth/profile", {
           method: "GET", 
           headers: {
             "Content-Type": "application/json",
@@ -50,7 +50,7 @@ export default function ProfilePage() {
   const handleLogout = async () => {
     try {
       // await fetch("http://localhost:5000/api/auth/logout", {
-      await fetch("http://localhost:5000/api/auth/logout", {
+      await fetch("angel-ai-assistant.vercel.app/api/auth/logout", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
       });

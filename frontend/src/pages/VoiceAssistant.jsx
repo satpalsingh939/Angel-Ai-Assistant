@@ -278,7 +278,7 @@ export default function AngelAssistant() {
   try {
     setLoading(true);
     // const res = await fetch("http://localhost:5000/api/assist/voice", {
-     const res = await fetch("http://localhost:5000/api/assist/voice", {
+     const res = await fetch("angel-ai-assistant.vercel.app/api/assist/voice", {
       method: "POST", 
       headers: {
         "Content-Type": "application/json",
