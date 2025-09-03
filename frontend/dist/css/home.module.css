@@ -1,0 +1,528 @@
+/* ===== Root Variables ===== */
+/* .loginIllustration img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.loginIllustration img:hover {
+  transform: scale(1.1) rotate(5deg);
+} */
+
+/* :root {
+  --primary: #4a6cf7;
+  --secondary: #f5f7ff;
+  --accent: #ff745c;
+  --dark: #1f1f1f;
+  --light: #fff;
+  --gray: #666;
+} */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  /* background: linear-gradient(to right, rgba(226, 92, 92, 0.403), rgba(83, 143, 239, 0.293)); */
+  /* background: linear-gradient(to right, rgba(215, 189, 189, 0.597), rgba(178, 187, 201, 0.778)); */
+  background: linear-gradient(to right, rgba(215, 189, 189, 0.418), rgba(178, 187, 201, 0.456));
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Header ===== */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--light);
+  padding: 0.3rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* background: linear-gradient(to right, rgba(239,68,68,0.7), rgba(59,130,246,0.5)); */
+  background: linear-gradient(to right, rgba(216, 133, 133, 0.889), rgba(120, 161, 227, 0.686));
+  color: white;
+}
+
+.chat-header .logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  transition: 0.3s;
+  /* text-decoration: none; */
+}
+
+.nav-links a:hover {
+  /* text-decoration: underline; */
+  color: rgba(5, 5, 5, 0.625);
+  font-size: 1.08rem;
+}
+
+/* ===== Home Section ===== */
+.home {
+  min-height: 90vh;
+  padding: 4rem 8%;
+  /* background: url('/public/1.jpg'); */
+  background: url('/public/21.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.home .row {
+  /* text-align: left; */
+  position: absolute;
+  top: 20%;
+  left: 3.5%;
+  /* background: linear-gradient(to right, rgba(255, 0, 0, 0.411) , rgba(0, 0, 255, 0.4)); */
+  background: linear-gradient(to right, rgba(216, 141, 141, 0.105), rgba(166, 180, 203, 0.144));
+    border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 5rem 2rem;
+  border-radius: 5%;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+
+.home h3 {
+  font-size: 3rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.home p {
+  color: var(--gray);
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  /* background: var(--primary); */
+  color: var(--light);
+  font-weight: 500;
+  transition: 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ===== About Section ===== */
+.about {
+  padding: 3rem 7%;
+  /* background-color: rgba(255, 255, 255, 0.775); */
+}
+
+.about h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--dark);
+}
+
+.about .row {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about .image {
+  /* flex: 1 1 35rem; */
+  flex: 1 1 25rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.about .image:hover{
+  transform: scale(1.03) rotate(-5deg);
+}
+
+.about .image img {
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.about .content {
+  /* flex: 1 1 35rem; */
+  flex: 1 1 20rem;
+}
+
+.about .content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about .icons-container {
+  display: flex;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.about .icons {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--light);
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.about .icons i {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+/* ===== Member Section ===== */
+.member {
+  padding: 3rem 8%;
+  text-align: center;
+    /* background-color: rgba(255, 255, 255, 0.775); */
+    /* display: flex; */
+}
+
+.member h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark);
+}
+
+.member .row {
+  display: flex;
+  /* gap: 3rem; */
+  align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+}
+
+.member .content {
+  /* flex: 1 1 40rem; */
+  flex: 1 1 20rem;
+  text-align: left;
+}
+
+.member .content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.member form {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+  /* flex-wrap: wrap; */
+}
+
+.member .btn{
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.member .box {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  /* flex: 1; */
+}
+
+.member .image {
+  /* width: 100%; */
+  border-radius: 15px;
+  padding: 1%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease-in-out;
+}
+
+.member .image:hover{
+  transform: scale(0.99) rotate(5deg);
+}
+
+/* ===== AI Assistants Section ===== */
+.assistants {
+  padding: 2.5rem 8%;
+    /* background-color: rgba(255, 255, 255, 0.775); */
+  text-align: center;
+}
+
+.assistants h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.assistant-grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); */
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.assistant-box {
+  padding: 0.4rem;
+  border-radius: 20px;
+  background: var(--light);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.assistant-box img {
+  margin-top: 2rem;
+}
+  
+  .assistant-box:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Reviews Section ===== */
+.reviews {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.reviews h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.reviewsContainer {
+  display: flex;
+  flex-wrap: wrap; /* responsive banane ke liye */
+  gap: 20px;
+  justify-content: center;
+}
+
+.reviewBox {
+  flex: 1 1 300px; /* responsive card size */
+  max-width: 350px;
+  background: #ffffff62;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.reviewBox p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.reviews .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reviews .info .name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.reviews .info .job {
+  font-size: 0.9rem;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.reviews .stars i {
+  color: gold;
+  margin-right: 2px;
+}
+
+.reviews .image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* 🔹 Tablets (<= 992px) */
+@media (max-width: 992px) {
+  .chat-header {
+    flex-direction: column;
+    /* gap: 1rem; */
+    padding: 1rem;
+    text-align: center;
+  }
+ 
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .home {
+    padding: 3rem 5%;
+  }
+
+  .home .row {
+    position: static;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 1.5rem;
+   background: linear-gradient(to right, rgb(203 122 122 / 38%), rgb(81 89 102 / 45%));
+  }
+
+  .home h3 {
+    font-size: 2.2rem;
+  }
+
+  .about .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .content {
+    margin-top: 1rem;
+  }
+
+  .member .row {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .member form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .assistant-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+/* 🔹 Mobiles (<= 768px) */
+@media (max-width: 768px) {
+  .chat-header .logo img {
+    height: 30px;
+  }
+
+  .nav-links a {
+    font-size: 0.80rem;
+  }
+
+.home {
+    min-height: 70vh; /* thodi height kam kardi */
+    padding: 2rem 5%;
+    background-position: top; /* mobile me top se dikhana better hota */
+  }
+
+  .home .row {
+    /* padding: 9rem 2rem; */ 
+    margin-top: 2.5rem;
+  }
+
+  .home h3 {
+    font-size: 1.8rem;
+  }
+
+  .home p {
+    font-size: 1rem;
+  }
+
+  .about h1,
+  .member h1,
+  .reviews h1 {
+    font-size: 2rem;
+  }
+
+  .about .icons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member .content h3 {
+    font-size: 1.6rem;
+  }
+
+  .reviewBox {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* 🔹 Extra Small Phones (<= 480px) */
+@media (max-width: 480px) {
+  .chat-header {
+    padding: 0.5rem;
+  }
+
+  .nav-links {
+    /* flex-direction: column; */
+    gap: 0.6rem;
+    align-items: center;
+    /* justify-content: center; */
+  }
+
+  .home {
+    min-height: 60vh;
+    /* padding: 2rem 1rem; */
+    padding: 1.5rem 3%;
+    background-position: center top;
+  }
+
+  .home .row {
+    padding: 2rem 1rem;
+   background: linear-gradient(to right, rgb(203 122 122 / 38%), rgb(81 89 102 / 45%));
+  }
+
+  .home h3 {
+    font-size: 1.5rem;
+  }
+
+  .home p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .about .content h3 {
+    font-size: 1.4rem;
+  }
+
+  .member .box {
+    width: 100%;
+  }
+
+  .assistant-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

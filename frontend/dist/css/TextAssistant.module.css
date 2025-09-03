@@ -1,0 +1,357 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* background: linear-gradient(to right, rgba(240, 122, 122, 0.7), #9dbcee80); */
+  background: linear-gradient(to right, rgba(215, 189, 189, 0.418), rgba(178, 187, 201, 0.456));
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+.chatHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0.2rem 1.4rem; */
+  padding: 0.2rem 1.4rem;
+  /* background: linear-gradient(to right,
+      rgba(239, 68, 68, 0.7),
+      rgba(59, 130, 246, 0.5)); */
+  background: linear-gradient(to right, rgba(216, 133, 133, 0.889), rgba(120, 161, 227, 0.686));
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 50px;
+}
+
+/* .headerLink {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  margin-right: auto;
+  margin-left: 20px;
+} */ 
+
+.headerLink {
+   background: linear-gradient(to right, rgba(228, 81, 81, 0.958), #749ee2fc);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 15em;
+}
+
+.headerLink:hover {
+  background: linear-gradient(to right, rgba(232, 49, 49, 0.818), #216de6a2);
+}
+
+/* .navLinks a {
+  margin-left: 18px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+.navLinks a:hover {
+  opacity: 0.8;
+} */
+
+.navLinks a {
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  transition: 0.3s;
+}
+
+.navLinks a:hover {
+  color: rgba(5, 5, 5, 0.625);
+  font-size: 1.08rem;
+}
+
+/* Chat Box */
+.chatBox {
+  flex: 1;
+  min-height: 20vh;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.aiBox {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.aiBox img {
+  height: 40px;
+  margin-right: 8px;
+  border-radius: 40%;
+  border-top: 1px solid red;
+  border-bottom: 1px solid blue;
+  border-left: 1px solid rgb(98, 53, 197);
+  border-right: 1px solid rgb(255, 38, 0);
+}
+
+.aiMsg {
+  /* background: linear-gradient(to right,
+      rgba(239, 68, 68, 0.7),
+      rgba(59, 130, 246, 0.5)); */
+  background: linear-gradient(to right, rgba(216, 133, 133, 0.889), rgba(120, 161, 227, 0.686));
+  padding: 12px 16px;
+  border-radius: 12px;
+  max-width: 60%;
+}
+
+/* User Msg */
+.userRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.userMsg {
+  background: linear-gradient(to right, rgba(216, 133, 133, 0.889), rgba(120, 161, 227, 0.686));
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  max-width: 60%;
+}
+
+.userIcon {
+  margin-left: 8px;
+  color: #4f46e5;
+  border-top: 1px solid red;
+  border-bottom: 1px solid blue;
+  border-left: 1px solid rgb(98, 53, 197);
+  border-right: 1px solid rgb(255, 38, 0);
+  border-radius: 50%;
+  font-size: xx-large;
+  padding: 5px;
+}
+
+.uploadedImg {
+  display: block;
+  margin-top: 8px;
+  max-width: 120px;
+  border-radius: 8px;
+}
+
+/* Input Box */
+.inputBox {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.inputText {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 20px;
+  color: white;
+  border-top: 1px solid red;
+  border-bottom: 1px solid blue;
+  border-left: 1px solid rgb(98, 53, 197);
+  border-right: 1px solid rgb(255, 38, 0);
+  outline: none;
+  /* background: linear-gradient(to right,
+  rgba(239, 68, 68, 0.423),
+  rgba(59, 131, 246, 0.203)); */
+  margin-right: 10px;
+  /* background: linear-gradient(to right, rgba(244, 6, 6, 0.7), #055fef80); */
+  background: linear-gradient(to right, rgba(216, 133, 133, 0.438), rgba(120, 161, 227, 0.323));
+}
+
+.fileLabel {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.fileIcon {
+  color: white;
+  font-size: 20px;
+}
+
+.sendBtn {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sendBtn:hover {
+  background: #4338ca;
+}
+
+/* 🔹 Tablet Screens */
+@media (max-width: 992px) {
+  .chatHeader {
+     flex-wrap: wrap;
+    padding: 0.6rem 2.5rem;
+  }
+
+  .navLinks a {
+   margin-left: 15px;
+    font-size: 15px;
+  }
+
+  .headerLink {
+    margin-left: auto; 
+    margin-right: 0;
+    font-size: 13px;
+    padding: 8px 15px;
+  }
+
+  .aiMsg,
+  .userMsg {
+    max-width: 75%;
+    /* bubble thoda bada ho jaye */
+    font-size: 14px; 
+  }
+
+  .inputText {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+/* 🔹 Mobile Screens */
+@media (max-width: 768px) {
+  .chatContainer {
+    height: 100vh;
+  }
+
+  .chatHeader {
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+  }
+
+  .logo img {
+    height: 35px;
+    /* margin-bottom: 10px; */
+  }
+ 
+  .navLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin: 7px 0; */
+    gap: 3rem;
+  }
+
+  .navLinks a {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .aiMsg,
+  .userMsg {
+    max-width: 85%;
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .inputBox {
+    flex-direction: row;
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .inputText {
+    flex: 1;
+    margin-right: 5px;
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .fileIcon {
+    font-size: 18px;
+  }
+
+  .sendBtn {
+    padding: 8px;
+    font-size: 16px;
+  }
+}
+
+/* 🔹 Extra Small Screens (phones under 480px) */
+@media (max-width: 480px) {
+  .chatHeader {
+    padding: 0.3rem 0.8rem;
+  }
+
+   .headerLink {
+    /* width: 80%; */
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+
+   .navLinks{
+    /* flex-direction: column; */
+    gap: 2rem;
+  }
+
+  .navLinks a {
+    font-size: 14px;
+  }
+
+  .aiMsg,
+  .userMsg {
+    max-width: 95%;
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .uploadedImg {
+    max-width: 100px;
+  }
+
+  .inputText {
+    font-size: 12px;
+    padding: 7px 9px;
+  }
+
+  .sendBtn {
+    padding: 7px;
+    font-size: 14px;
+  } 
+}
+
+@media (max-width: 310px) {
+.logo img {
+    height: 30px;
+    /* margin-bottom: 10px; */
+  }
+
+  .navLinks {
+    /* flex-direction: column; */
+    gap: 1rem;
+  }
+
+  .navLinks a {
+    font-size: 13px;
+  }
+
+  .headerLink {
+    /* width: 80%; */
+    font-size: 11px;
+    padding: 7px 12px;
+  }
+}
+
